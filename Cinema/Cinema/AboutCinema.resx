@@ -880,6 +880,16 @@ Screen-MAX 6х17 м.
         AElFTkSuQmCC
 </value>
   </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Кинопоказ: 5 кинозалов на 
+160 посадочных мест. 
+Большой Премьер зал киноцентра
+оборудован увеличенным 
+широкоформатным экраном 
+Screen-MAX 6х17 м. 
+(площадь экрана 102 кв.м.).
+Спасибо, что выбрали нас!</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

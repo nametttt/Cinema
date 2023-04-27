@@ -16,7 +16,7 @@ namespace Cinema
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChangeSession());
+            Application.Run(new Auth());
         }
     }
 }

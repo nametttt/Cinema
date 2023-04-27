@@ -71,6 +71,21 @@ namespace Cinema
                         db.Session.Add(session);
 
                         Room room = new Room();
+                        if (Convert.ToInt32(txtFilm.SelectedItem) == room.RoomID)
+                        {
+                            for (int i = 0; i < room.RowsCount; i++)
+                            {
+                                for (int j = 0; j < room.SeatsOfRowCount; j++)
+                                {
+                                    Ticket ticket = new Ticket();
+                                    ticket.SessionID = session.SessionID;
+                                    ticket.SeatID = i * room.SeatsOfRowCount + j + 1;
+                                    ticket.Price = Convert.ToDecimal(Price.Text);
+
+                                    db.Ticket.Add(ticket);
+                                }
+                            }
+                        }
 
                         db.SaveChanges();
                         MessageBox.Show("Сеанс был добавлен успешно!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);

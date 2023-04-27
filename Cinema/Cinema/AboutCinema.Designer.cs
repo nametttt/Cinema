@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -58,7 +59,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Margin = new System.Windows.Forms.Padding(0, 9, 0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(890, 52);
+            this.menuStrip1.Size = new System.Drawing.Size(890, 50);
             this.menuStrip1.TabIndex = 89;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -67,7 +68,7 @@
             this.сеансыToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.сеансыToolStripMenuItem.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.сеансыToolStripMenuItem.Name = "сеансыToolStripMenuItem";
-            this.сеансыToolStripMenuItem.Size = new System.Drawing.Size(134, 48);
+            this.сеансыToolStripMenuItem.Size = new System.Drawing.Size(134, 46);
             this.сеансыToolStripMenuItem.Text = "Фильмы";
             this.сеансыToolStripMenuItem.Click += new System.EventHandler(this.сеансыToolStripMenuItem_Click);
             // 
@@ -77,7 +78,7 @@
             this.купитьБилетыToolStripMenuItem.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.купитьБилетыToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.купитьБилетыToolStripMenuItem.Name = "купитьБилетыToolStripMenuItem";
-            this.купитьБилетыToolStripMenuItem.Size = new System.Drawing.Size(167, 48);
+            this.купитьБилетыToolStripMenuItem.Size = new System.Drawing.Size(167, 46);
             this.купитьБилетыToolStripMenuItem.Text = "Расписание";
             this.купитьБилетыToolStripMenuItem.Click += new System.EventHandler(this.РасписаниеToolStripMenuItem_Click);
             // 
@@ -86,13 +87,13 @@
             this.списокФильмовToolStripMenuItem.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.списокФильмовToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Info;
             this.списокФильмовToolStripMenuItem.Name = "списокФильмовToolStripMenuItem";
-            this.списокФильмовToolStripMenuItem.Size = new System.Drawing.Size(193, 48);
+            this.списокФильмовToolStripMenuItem.Size = new System.Drawing.Size(193, 46);
             this.списокФильмовToolStripMenuItem.Text = "О кинотеатре";
             // 
             // личныйКабинетToolStripMenuItem
             // 
             this.личныйКабинетToolStripMenuItem.Name = "личныйКабинетToolStripMenuItem";
-            this.личныйКабинетToolStripMenuItem.Size = new System.Drawing.Size(236, 48);
+            this.личныйКабинетToolStripMenuItem.Size = new System.Drawing.Size(236, 46);
             this.личныйКабинетToolStripMenuItem.Text = "Личный кабинет";
             this.личныйКабинетToolStripMenuItem.Click += new System.EventHandler(this.личныйКабинетToolStripMenuItem_Click);
             // 
@@ -150,12 +151,23 @@
             this.pictureBox3.TabIndex = 87;
             this.pictureBox3.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(535, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(353, 280);
+            this.label4.TabIndex = 93;
+            this.label4.Text = resources.GetString("label4.Text");
+            // 
             // AboutCinema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(890, 525);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
@@ -186,5 +198,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label4;
     }
 }

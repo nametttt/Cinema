@@ -84,10 +84,6 @@
             this.txtFilm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtFilm.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtFilm.FormattingEnabled = true;
-            this.txtFilm.Items.AddRange(new object[] {
-            "Кот в сапогах",
-            "Аватар 2",
-            "Мульт в кино"});
             this.txtFilm.Location = new System.Drawing.Point(15, 237);
             this.txtFilm.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.txtFilm.Name = "txtFilm";
@@ -185,10 +181,6 @@
             this.txtRoom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtRoom.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtRoom.FormattingEnabled = true;
-            this.txtRoom.Items.AddRange(new object[] {
-            "Кот в сапогах",
-            "Аватар 2",
-            "Мульт в кино"});
             this.txtRoom.Location = new System.Drawing.Point(15, 342);
             this.txtRoom.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.txtRoom.Name = "txtRoom";
@@ -244,10 +236,6 @@
             this.txtSession.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSession.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtSession.FormattingEnabled = true;
-            this.txtSession.Items.AddRange(new object[] {
-            "Кот в сапогах",
-            "Аватар 2",
-            "Мульт в кино"});
             this.txtSession.Location = new System.Drawing.Point(15, 132);
             this.txtSession.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.txtSession.Name = "txtSession";
