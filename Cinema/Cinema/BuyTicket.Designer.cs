@@ -307,7 +307,7 @@
             // 
             // button23
             // 
-            this.button23.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button23.BackColor = System.Drawing.Color.LightCoral;
             this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button23.Location = new System.Drawing.Point(400, 312);
             this.button23.Name = "button23";

@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.txtFilm = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtDuration = new System.Windows.Forms.TextBox();
@@ -68,8 +70,6 @@
             this.filmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cinemaDataSet = new Cinema.CinemaDataSet();
             this.filmTableAdapter = new Cinema.CinemaDataSetTableAdapters.FilmTableAdapter();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmBindingSource)).BeginInit();
@@ -140,6 +140,37 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1312, 1050);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DarkGray;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Sitka Banner", 14.25F);
+            this.button3.Location = new System.Drawing.Point(647, 1187);
+            this.button3.Margin = new System.Windows.Forms.Padding(15, 15, 15, 5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(650, 57);
+            this.button3.TabIndex = 39;
+            this.button3.Text = "Удалить";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkGray;
+            this.tableLayoutPanel1.SetColumnSpan(this.button2, 2);
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Sitka Banner", 14.25F);
+            this.button2.Location = new System.Drawing.Point(15, 1187);
+            this.button2.Margin = new System.Windows.Forms.Padding(15, 15, 15, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(602, 57);
+            this.button2.TabIndex = 36;
+            this.button2.Text = "Назад";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // txtFilm
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtFilm, 2);
@@ -149,7 +180,7 @@
             this.txtFilm.Location = new System.Drawing.Point(15, 132);
             this.txtFilm.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.txtFilm.Name = "txtFilm";
-            this.txtFilm.Size = new System.Drawing.Size(590, 43);
+            this.txtFilm.Size = new System.Drawing.Size(602, 43);
             this.txtFilm.TabIndex = 35;
             this.txtFilm.SelectedIndexChanged += new System.EventHandler(this.txtFilm_SelectedIndexChanged);
             // 
@@ -161,7 +192,7 @@
             this.label11.Location = new System.Drawing.Point(15, 85);
             this.label11.Margin = new System.Windows.Forms.Padding(15, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(291, 42);
+            this.label11.Size = new System.Drawing.Size(297, 42);
             this.label11.TabIndex = 34;
             this.label11.Text = "Номер фильма";
             // 
@@ -175,7 +206,7 @@
             this.txtDuration.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDuration.Size = new System.Drawing.Size(590, 43);
+            this.txtDuration.Size = new System.Drawing.Size(602, 43);
             this.txtDuration.TabIndex = 33;
             // 
             // label10
@@ -186,7 +217,7 @@
             this.label10.Location = new System.Drawing.Point(15, 1075);
             this.label10.Margin = new System.Windows.Forms.Padding(15, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(291, 42);
+            this.label10.Size = new System.Drawing.Size(297, 42);
             this.label10.TabIndex = 32;
             this.label10.Text = "Продолжительность";
             // 
@@ -200,7 +231,7 @@
             this.txtCountry.Location = new System.Drawing.Point(15, 597);
             this.txtCountry.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(590, 43);
+            this.txtCountry.Size = new System.Drawing.Size(602, 43);
             this.txtCountry.TabIndex = 31;
             this.txtCountry.ValueMember = "Name";
             this.txtCountry.SelectedIndexChanged += new System.EventHandler(this.txtCountry_SelectedIndexChanged);
@@ -211,10 +242,10 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Sitka Banner", 14.25F);
-            this.button1.Location = new System.Drawing.Point(635, 1187);
+            this.button1.Location = new System.Drawing.Point(647, 1264);
             this.button1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(636, 57);
+            this.button1.Size = new System.Drawing.Size(650, 57);
             this.button1.TabIndex = 30;
             this.button1.Text = "Изменить";
             this.button1.UseVisualStyleBackColor = false;
@@ -227,10 +258,10 @@
             this.btnReg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReg.Font = new System.Drawing.Font("Sitka Banner", 14.25F);
-            this.btnReg.Location = new System.Drawing.Point(15, 1187);
+            this.btnReg.Location = new System.Drawing.Point(15, 1264);
             this.btnReg.Margin = new System.Windows.Forms.Padding(15, 15, 15, 5);
             this.btnReg.Name = "btnReg";
-            this.btnReg.Size = new System.Drawing.Size(590, 57);
+            this.btnReg.Size = new System.Drawing.Size(602, 57);
             this.btnReg.TabIndex = 28;
             this.btnReg.Text = "Добавить";
             this.btnReg.UseVisualStyleBackColor = false;
@@ -246,7 +277,7 @@
             this.txtPhoto.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.txtPhoto.Name = "txtPhoto";
             this.txtPhoto.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPhoto.Size = new System.Drawing.Size(590, 43);
+            this.txtPhoto.Size = new System.Drawing.Size(602, 43);
             this.txtPhoto.TabIndex = 27;
             // 
             // label9
@@ -257,7 +288,7 @@
             this.label9.Location = new System.Drawing.Point(15, 970);
             this.label9.Margin = new System.Windows.Forms.Padding(15, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(291, 42);
+            this.label9.Size = new System.Drawing.Size(297, 42);
             this.label9.TabIndex = 26;
             this.label9.Text = "Фотография";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -271,7 +302,7 @@
             this.txtReting.Location = new System.Drawing.Point(15, 912);
             this.txtReting.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.txtReting.Name = "txtReting";
-            this.txtReting.Size = new System.Drawing.Size(590, 43);
+            this.txtReting.Size = new System.Drawing.Size(602, 43);
             this.txtReting.TabIndex = 25;
             this.txtReting.SelectedIndexChanged += new System.EventHandler(this.txtReting_SelectedIndexChanged);
             // 
@@ -283,7 +314,7 @@
             this.label8.Location = new System.Drawing.Point(15, 865);
             this.label8.Margin = new System.Windows.Forms.Padding(15, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(291, 42);
+            this.label8.Size = new System.Drawing.Size(297, 42);
             this.label8.TabIndex = 24;
             this.label8.Text = "Рейтинг";
             // 
@@ -295,7 +326,7 @@
             this.label6.Location = new System.Drawing.Point(15, 760);
             this.label6.Margin = new System.Windows.Forms.Padding(15, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(291, 42);
+            this.label6.Size = new System.Drawing.Size(297, 42);
             this.label6.TabIndex = 22;
             this.label6.Text = "Жанр";
             // 
@@ -308,7 +339,7 @@
             this.txtDirector.Location = new System.Drawing.Point(15, 702);
             this.txtDirector.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.txtDirector.Name = "txtDirector";
-            this.txtDirector.Size = new System.Drawing.Size(590, 43);
+            this.txtDirector.Size = new System.Drawing.Size(602, 43);
             this.txtDirector.TabIndex = 21;
             // 
             // label5
@@ -319,7 +350,7 @@
             this.label5.Location = new System.Drawing.Point(15, 655);
             this.label5.Margin = new System.Windows.Forms.Padding(15, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(291, 42);
+            this.label5.Size = new System.Drawing.Size(297, 42);
             this.label5.TabIndex = 20;
             this.label5.Text = "Режиссер";
             // 
@@ -331,7 +362,7 @@
             this.label4.Location = new System.Drawing.Point(15, 550);
             this.label4.Margin = new System.Windows.Forms.Padding(15, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(291, 42);
+            this.label4.Size = new System.Drawing.Size(297, 42);
             this.label4.TabIndex = 18;
             this.label4.Text = "Страна";
             // 
@@ -344,7 +375,7 @@
             this.txtRelizeDate.Location = new System.Drawing.Point(15, 492);
             this.txtRelizeDate.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.txtRelizeDate.Name = "txtRelizeDate";
-            this.txtRelizeDate.Size = new System.Drawing.Size(590, 43);
+            this.txtRelizeDate.Size = new System.Drawing.Size(602, 43);
             this.txtRelizeDate.TabIndex = 17;
             // 
             // label3
@@ -355,7 +386,7 @@
             this.label3.Location = new System.Drawing.Point(15, 445);
             this.label3.Margin = new System.Windows.Forms.Padding(15, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(291, 42);
+            this.label3.Size = new System.Drawing.Size(297, 42);
             this.label3.TabIndex = 16;
             this.label3.Text = "Год выхода";
             // 
@@ -370,7 +401,7 @@
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescription.Size = new System.Drawing.Size(590, 90);
+            this.txtDescription.Size = new System.Drawing.Size(602, 90);
             this.txtDescription.TabIndex = 15;
             // 
             // label2
@@ -381,7 +412,7 @@
             this.label2.Location = new System.Drawing.Point(15, 295);
             this.label2.Margin = new System.Windows.Forms.Padding(15, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(291, 42);
+            this.label2.Size = new System.Drawing.Size(297, 42);
             this.label2.TabIndex = 14;
             this.label2.Text = "Описание";
             // 
@@ -394,7 +425,7 @@
             this.txtName.Location = new System.Drawing.Point(15, 237);
             this.txtName.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(590, 43);
+            this.txtName.Size = new System.Drawing.Size(602, 43);
             this.txtName.TabIndex = 13;
             // 
             // label7
@@ -405,7 +436,7 @@
             this.label7.Location = new System.Drawing.Point(15, 190);
             this.label7.Margin = new System.Windows.Forms.Padding(15, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(291, 42);
+            this.label7.Size = new System.Drawing.Size(297, 42);
             this.label7.TabIndex = 12;
             this.label7.Text = "Название";
             // 
@@ -420,7 +451,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(15);
-            this.label1.Size = new System.Drawing.Size(1266, 77);
+            this.label1.Size = new System.Drawing.Size(1292, 77);
             this.label1.TabIndex = 1;
             this.label1.Text = "Изменение данных о фильмах";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -434,7 +465,7 @@
             this.txtGenre.Location = new System.Drawing.Point(15, 807);
             this.txtGenre.Margin = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.txtGenre.Name = "txtGenre";
-            this.txtGenre.Size = new System.Drawing.Size(590, 43);
+            this.txtGenre.Size = new System.Drawing.Size(602, 43);
             this.txtGenre.TabIndex = 23;
             this.txtGenre.SelectedIndexChanged += new System.EventHandler(this.txtGenre_SelectedIndexChanged);
             // 
@@ -454,22 +485,22 @@
             this.durationDataGridViewTextBoxColumn,
             this.dataGridViewImageColumn1});
             this.dataGridView1.DataSource = this.filmBindingSource;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Sitka Banner", 14.25F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Banner", 14.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(635, 92);
+            this.dataGridView1.Location = new System.Drawing.Point(647, 92);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(15);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.tableLayoutPanel1.SetRowSpan(this.dataGridView1, 20);
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(636, 1065);
+            this.dataGridView1.Size = new System.Drawing.Size(650, 1065);
             this.dataGridView1.TabIndex = 29;
             // 
             // filmIDDataGridViewTextBoxColumn
@@ -566,35 +597,6 @@
             // filmTableAdapter
             // 
             this.filmTableAdapter.ClearBeforeFill = true;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DarkGray;
-            this.tableLayoutPanel1.SetColumnSpan(this.button2, 2);
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Sitka Banner", 14.25F);
-            this.button2.Location = new System.Drawing.Point(348, 716);
-            this.button2.Margin = new System.Windows.Forms.Padding(15, 15, 15, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(590, 57);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Назад";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.DarkGray;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Sitka Banner", 14.25F);
-            this.button3.Location = new System.Drawing.Point(325, 716);
-            this.button3.Margin = new System.Windows.Forms.Padding(15, 15, 15, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(636, 57);
-            this.button3.TabIndex = 39;
-            this.button3.Text = "Удалить";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // ChangeFilms
             // 

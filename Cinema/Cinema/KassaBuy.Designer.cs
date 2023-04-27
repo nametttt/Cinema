@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelAdminName = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.labelAdminName = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -47,6 +47,28 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Sitka Banner", 12F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(415, 150);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(355, 38);
+            this.dateTimePicker1.TabIndex = 32;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label7.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(297, 92);
+            this.label7.Margin = new System.Windows.Forms.Padding(15, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(99, 55);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Фильм";
+            // 
             // labelAdminName
             // 
             this.labelAdminName.AutoSize = true;
@@ -61,28 +83,6 @@
             this.labelAdminName.TabIndex = 7;
             this.labelAdminName.Text = "Оформление билета";
             this.labelAdminName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label7.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(297, 92);
-            this.label7.Margin = new System.Windows.Forms.Padding(15, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 55);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Фильм";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Sitka Banner", 12F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(415, 150);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(355, 38);
-            this.dateTimePicker1.TabIndex = 32;
             // 
             // tableLayoutPanel1
             // 
@@ -122,8 +122,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 589);
-            this.tableLayoutPanel1.TabIndex = 27;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            this.tableLayoutPanel1.TabIndex = 28;
             // 
             // comboBox5
             // 
@@ -206,7 +205,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkGray;
+            this.button1.BackColor = System.Drawing.Color.LightCoral;
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Sitka Banner", 14.25F);
@@ -220,7 +219,7 @@
             // 
             // btnReg
             // 
-            this.btnReg.BackColor = System.Drawing.Color.DarkGray;
+            this.btnReg.BackColor = System.Drawing.Color.LightCoral;
             this.btnReg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReg.Font = new System.Drawing.Font("Sitka Banner", 14.25F);
@@ -308,21 +307,21 @@
 
         #endregion
 
-        public System.Windows.Forms.Label labelAdminName;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnReg;
+        public System.Windows.Forms.Label labelAdminName;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox txtReting;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnReg;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cinema
@@ -44,6 +45,18 @@ namespace Cinema
                         db.Film.Add(film);
                         db.SaveChanges();
                         MessageBox.Show("Фильм был добавлен успешно!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        txtName.Text = null;
+                        txtPhoto.Text = null;
+                        txtDescription.Text = null;
+                        txtDirector.Text = null;
+                        txtRelizeDate.Text = null;
+                        txtDuration.Text = null;
+                        txtGenre.SelectedItem = null;
+                        txtCountry.SelectedItem = null;
+                        txtReting.SelectedItem = null;
+                        txtDuration.Text = null;
+
                         this.filmTableAdapter.Fill(this.cinemaDataSet.Film);
                     }
                 }
@@ -77,6 +90,17 @@ namespace Cinema
                 }
                 db.SaveChanges();
                 MessageBox.Show("Данные изменены успешно!");
+                txtFilm.SelectedItem = null;
+                txtName.Text = "";
+                txtPhoto.Text = "";
+                txtDescription.Text = "";
+                txtDirector.Text = "";
+                txtRelizeDate.Text = "";
+                txtDuration.Text = "";
+                txtGenre.SelectedItem = null;
+                txtCountry.SelectedItem = null;
+                txtReting.SelectedItem = null;
+                txtDuration.Text = "";
             }
             this.filmTableAdapter.Update(this.cinemaDataSet.Film);
         }
@@ -115,11 +139,47 @@ namespace Cinema
             {
                 foreach (Country country in db.Country)
                 {
-                    if (country.Name == txtCountry.SelectedItem.ToString())
+                    if (txtCountry.SelectedItem != null)
                     {
-                        myCountry = country.CountryID;
+                        if (country.Name == txtCountry.SelectedItem.ToString())
+                        {
+                            myCountry = country.CountryID;
+                        }
                     }
                 }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (CinemaEntities1 db = new CinemaEntities1())
+            {
+                foreach (Film f in db.Film)
+                {
+                    if (Convert.ToInt32(txtFilm.SelectedItem) == f.FilmID)
+                    {
+                        txtFilm.Items.Remove(f.FilmID);
+                        db.Film.Remove(f);
+                    }
+                }
+                db.SaveChanges();
+                this.filmTableAdapter.Fill(this.cinemaDataSet.Film);
+                MessageBox.Show("Удаление прошло успешно!");
+                txtName.Text = null;
+                txtPhoto.Text = null;
+                txtDescription.Text = null;
+                txtDirector.Text = null;
+                txtRelizeDate.Text = null;
+                txtDuration.Text = null;
+                txtGenre.SelectedItem = null;
+                txtCountry.SelectedItem = null;
+                txtReting.SelectedItem = null;
+                txtDuration.Text = null;
             }
         }
 
@@ -129,9 +189,12 @@ namespace Cinema
             {
                 foreach (Rating rating in db.Rating)
                 {
-                    if (rating.Name == txtReting.SelectedItem.ToString())
+                    if (txtReting.SelectedItem != null)
                     {
-                        myRating = rating.RatingID;
+                        if (rating.Name == txtReting.SelectedItem.ToString())
+                        {
+                            myRating = rating.RatingID;
+                        }
                     }
                 }
             }
@@ -139,8 +202,16 @@ namespace Cinema
 
         private void txtFilm_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btnReg.Enabled= false;
-            using(CinemaEntities1 db = new CinemaEntities1())
+            if (txtFilm.SelectedItem == null)
+            {
+                btnReg.Enabled = true;
+            }
+            else
+            {
+                btnReg.Enabled = false;
+            }
+
+            using (CinemaEntities1 db = new CinemaEntities1())
             {
                 foreach(Film film  in db.Film)
                 {
@@ -191,7 +262,7 @@ namespace Cinema
             {
                 try
                 {
-                    this.photos = File.ReadAllBytes(openFileDialog.FileName);
+                    this.photos = System.IO.File.ReadAllBytes(openFileDialog.FileName);
                     txtPhoto.Text = openFileDialog.FileName;
                 }
                 catch
@@ -207,9 +278,12 @@ namespace Cinema
             {
                 foreach (Genre genre in db.Genre)
                 {
-                    if (genre.Name == txtGenre.SelectedItem.ToString())
+                    if (txtGenre.SelectedItem != null)
                     {
-                        myGenre = genre.GenreID;
+                         if (genre.Name == txtGenre.SelectedItem.ToString())
+                        {
+                            myGenre = genre.GenreID;
+                        }
                     }
                 }
             }

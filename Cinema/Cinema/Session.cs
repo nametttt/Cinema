@@ -29,5 +29,12 @@ namespace Cinema
         public virtual Room Room { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Ticket> Ticket { get; set; }
+
+        public Session(int roomID, int filmID, DateTime sessionDate)
+        {
+            RoomID = roomID;
+            FilmID = filmID;
+            SessionDate = sessionDate;
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -128,6 +129,54 @@ namespace Cinema
             this.Hide();
             Auth mainForm = new Auth();
             mainForm.Show();
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            using (CinemaEntities1 db = new CinemaEntities1())
+            {
+                foreach (var i in db.Film)
+                {
+                    var panelProduct = new Panel();
+                    panelProduct.BorderStyle = BorderStyle.FixedSingle;
+
+                    panelProduct.Width = 200;
+                    panelProduct.Height = 200;
+
+                    var pictureBoxProduct = new PictureBox();
+                    pictureBoxProduct.Image = (Image)new ImageConverter().ConvertFrom(i.Photo);
+                    pictureBoxProduct.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureBoxProduct.Dock = DockStyle.Fill;
+                    pictureBoxProduct.Height = 100;
+
+                    var labelProductName = new Label();
+                    labelProductName.Text = i.Title +" "+i.Rating.Name;
+                    labelProductName.Dock = DockStyle.Bottom;
+
+
+
+                    var btn = new Button();
+                    btn.BackColor = Color.LightCoral;
+                    btn.Text = "Купить билет";
+                    btn.Dock = DockStyle.Bottom;
+
+
+                    panelProduct.Controls.Add(pictureBoxProduct);
+
+                    panelProduct.Controls.Add(labelProductName);
+
+                    panelProduct.Controls.Add(btn);
+
+
+                    flowLayoutPanel1.Controls.Add(panelProduct);
+
+
+
+                   
+
+                }
+
+            }
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnReg = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnReg, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePicker1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 1);
@@ -59,26 +61,39 @@
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(15);
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(810, 608);
-            this.tableLayoutPanel1.TabIndex = 26;
+            this.tableLayoutPanel1.TabIndex = 27;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightCoral;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Sitka Banner", 14.25F);
+            this.button1.Location = new System.Drawing.Point(420, 156);
+            this.button1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(360, 57);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Сформировать отчет";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnReg
             // 
-            this.btnReg.BackColor = System.Drawing.Color.DarkGray;
-            this.tableLayoutPanel1.SetColumnSpan(this.btnReg, 2);
+            this.btnReg.BackColor = System.Drawing.Color.LightCoral;
             this.btnReg.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReg.Font = new System.Drawing.Font("Sitka Banner", 14.25F);
-            this.btnReg.Location = new System.Drawing.Point(30, 157);
+            this.btnReg.Location = new System.Drawing.Point(30, 156);
             this.btnReg.Margin = new System.Windows.Forms.Padding(15, 15, 15, 5);
             this.btnReg.Name = "btnReg";
-            this.btnReg.Size = new System.Drawing.Size(750, 57);
+            this.btnReg.Size = new System.Drawing.Size(360, 57);
             this.btnReg.TabIndex = 33;
-            this.btnReg.Text = "Сформировать отчет";
+            this.btnReg.Text = "Назад";
             this.btnReg.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
@@ -99,7 +114,7 @@
             this.label7.Location = new System.Drawing.Point(176, 92);
             this.label7.Margin = new System.Windows.Forms.Padding(15, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(225, 50);
+            this.label7.Size = new System.Drawing.Size(225, 49);
             this.label7.TabIndex = 9;
             this.label7.Text = "Выберите период";
             // 
@@ -121,16 +136,17 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.dataGridView1, 2);
             this.dataGridView1.DataSource = this.cinemaDataSet4BindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 234);
+            this.dataGridView1.Location = new System.Drawing.Point(30, 233);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(15);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(750, 421);
+            this.dataGridView1.Size = new System.Drawing.Size(750, 422);
             this.dataGridView1.TabIndex = 8;
             // 
             // WatchDoc
@@ -152,11 +168,12 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnReg;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label labelAdminName;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource cinemaDataSet4BindingSource;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button btnReg;
     }
 }

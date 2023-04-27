@@ -21,6 +21,7 @@ namespace Cinema
     
         public virtual Customer Customer { get; set; }
         public virtual Employee Employee { get; set; }
+        
 
         public User(string email, string userPassword, string userRole)
         {
@@ -28,6 +29,7 @@ namespace Cinema
             UserPassword = userPassword;
             UserRole = "Покупатель";
         }
+
         public User() { }
     }
 }

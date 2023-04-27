@@ -27,5 +27,12 @@ namespace Cinema
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Order { get; set; }
+
+        public Employee(int userID, string surname, string name)
+        {
+            UserID = userID;
+            Surname = surname;
+            Name = name;
+        }
     }
 }

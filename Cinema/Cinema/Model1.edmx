@@ -107,7 +107,7 @@
           <Key>
             <PropertyRef Name="TicketID" />
           </Key>
-          <Property Name="TicketID" Type="int" Nullable="false" />
+          <Property Name="TicketID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="OrderID" Type="int" />
           <Property Name="SessionID" Type="int" Nullable="false" />
           <Property Name="SeatID" Type="int" Nullable="false" />
@@ -494,7 +494,7 @@
           <Key>
             <PropertyRef Name="TicketID" />
           </Key>
-          <Property Name="TicketID" Type="Int32" Nullable="false" />
+          <Property Name="TicketID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="OrderID" Type="Int32" />
           <Property Name="SessionID" Type="Int32" Nullable="false" />
           <Property Name="SeatID" Type="Int32" Nullable="false" />

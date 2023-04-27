@@ -67,7 +67,7 @@
             this.сеансыToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.сеансыToolStripMenuItem.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.сеансыToolStripMenuItem.Name = "сеансыToolStripMenuItem";
-            this.сеансыToolStripMenuItem.Size = new System.Drawing.Size(134, 46);
+            this.сеансыToolStripMenuItem.Size = new System.Drawing.Size(134, 48);
             this.сеансыToolStripMenuItem.Text = "Фильмы";
             this.сеансыToolStripMenuItem.Click += new System.EventHandler(this.сеансыToolStripMenuItem_Click);
             // 
@@ -92,7 +92,7 @@
             // личныйКабинетToolStripMenuItem
             // 
             this.личныйКабинетToolStripMenuItem.Name = "личныйКабинетToolStripMenuItem";
-            this.личныйКабинетToolStripMenuItem.Size = new System.Drawing.Size(236, 46);
+            this.личныйКабинетToolStripMenuItem.Size = new System.Drawing.Size(236, 48);
             this.личныйКабинетToolStripMenuItem.Text = "Личный кабинет";
             this.личныйКабинетToolStripMenuItem.Click += new System.EventHandler(this.личныйКабинетToolStripMenuItem_Click);
             // 
